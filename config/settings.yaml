@@ -1,0 +1,72 @@
+ollama:
+  base_url: "http://ollama.tailce422e.ts.net:11434"
+  api_url: "http://ollama.tailce422e.ts.net:11434/v1"
+  default_model: "qwen3:14b"
+  models:
+    content: "qwen3:14b"
+    content_large: "qwen3:30b"
+    image_prompt: "qwen3:14b"
+    narration: "qwen3:14b"
+    translation: "qwen3:14b"
+  timeout_seconds: 300
+  max_retries: 3
+  retry_delay_seconds: 2
+
+database:
+  path: "data/purana_samhitha.db"
+  echo: false
+
+generation:
+  batch_size: 10
+  max_concurrent_jobs: 2
+
+languages:
+  supported:
+    - en
+    - hi
+    - te
+    - ta
+    - kn
+    - ml
+    - sa
+  default: en
+
+image:
+  default_style: "Ancient Hindu manuscript, temple mural, Tanjore painting style, highly detailed mythology encyclopedia illustration"
+  providers:
+    comfyui:
+      enabled: false
+      base_url: "http://localhost:8188"
+    flux:
+      enabled: false
+      base_url: "http://localhost:7860"
+    sdxl:
+      enabled: false
+      base_url: "http://localhost:7860"
+
+audio:
+  providers:
+    piper:
+      enabled: false
+      model_path: ""
+    kokoro:
+      enabled: false
+      base_url: "http://localhost:8880"
+    coqui:
+      enabled: false
+      base_url: "http://localhost:5002"
+
+export:
+  output_dir: "generated/exports"
+
+logging:
+  level: "INFO"
+  file: "logs/purana_factory.log"
+  rotation: "10 MB"
+  retention: "30 days"
+
+paths:
+  generated_images: "generated/images"
+  generated_audio: "generated/audio"
+  generated_json: "generated/json"
+  logs: "logs"

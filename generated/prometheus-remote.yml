@@ -1,0 +1,144 @@
+# Prometheus config for 022-opentelemetry
+# Scrapes OTEL Collector's Prometheus exporter (metrics from OTLP pipeline)
+# and each service's /actuator/prometheus (Micrometer) for dashboard data.
+# Run from observability stack: docker compose up -d
+# Tailscale hostnames (e.g. moneytree-backend.tailce422e.ts.net) must be resolvable from the Prometheus container.
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - /etc/prometheus/alerts.yml
+  - /etc/prometheus/recording_rules.yml
+
+scrape_configs:
+  # OpenTelemetry Collector exposes OTel metrics as Prometheus format at :8889
+  - job_name: 'otel-collector'
+    static_configs:
+      - targets: ['otel-collector:8889']
+    metrics_path: /metrics
+
+  # Spring Boot services: Micrometer Prometheus (application label = service name)
+  - job_name: 'moneytree-backend'
+    static_configs:
+      - targets: ['moneytree-backend.tailce422e.ts.net:8080']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-gateway'
+    static_configs:
+      - targets: ['moneytree-gateway.tailce422e.ts.net:8080']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-discovery'
+    static_configs:
+      - targets: ['moneytree-discovery.tailce422e.ts.net:8761']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-ingestionengine'
+    static_configs:
+      - targets: ['moneytree-ingestionengine.tailce422e.ts.net:8083']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-kitegateway'
+    static_configs:
+      - targets: ['moneytree-kitegateway.tailce422e.ts.net:8081']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-ironflyengine'
+    static_configs:
+      - targets: ['moneytree-ironflyengine.tailce422e.ts.net:8085']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-flowaccumulationengine'
+    static_configs:
+      - targets: ['moneytree-flowaccumulationengine.tailce422e.ts.net:8086']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-equityaccumulatorcetengine'
+    static_configs:
+      - targets: ['moneytree-equityaccumulatorcetengine.tailce422e.ts.net:8086']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-fnoconvexengine'
+    static_configs:
+      - targets: ['moneytree-fnoconvexengine.tailce422e.ts.net:8087']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-fnocapitalengine'
+    static_configs:
+      - targets: ['moneytree-fnocapitalengine.tailce422e.ts.net:8082']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-analysisengine'
+    static_configs:
+      - targets: ['moneytree-analysisengine.tailce422e.ts.net:8087']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-market-data-kafka-engine'
+    static_configs:
+      - targets: ['moneytree-market-data-kafka-engine.tailce422e.ts.net:8095']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-meqrotateengine'
+    static_configs:
+      - targets: ['moneytree-meqrotateengine.tailce422e.ts.net:8088']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-etfaccumulatorengine'
+    static_configs:
+      - targets: ['moneytree-etfaccumulatorengine.tailce422e.ts.net:8090']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-fnoastengine'
+    static_configs:
+      - targets: ['moneytree-fnoastengine.tailce422e.ts.net:8091']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-backtestengine'
+    static_configs:
+      - targets: ['moneytree-backtestengine.tailce422e.ts.net:8089']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-optionchain'
+    static_configs:
+      - targets: ['moneytree-optionchain.tailce422e.ts.net:8096']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-abcengine'
+    static_configs:
+      - targets: ['moneytree-abcengine.tailce422e.ts.net:8092']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-equityaccumulationengine'
+    static_configs:
+      - targets: ['moneytree-equityaccumulationengine.tailce422e.ts.net:8093']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-creditspreadengine'
+    static_configs:
+      - targets: ['moneytree-creditspreadengine.tailce422e.ts.net:8094']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+  - job_name: 'moneytree-ingestion-normalizer'
+    static_configs:
+      - targets: ['moneytree-ingestionengine.tailce422e.ts.net:8097']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 15s
+
+  - job_name: 'ollama'
+    static_configs:
+      - targets: ['ollama.tailce422e.ts.net:8000']
+    metrics_path: /metrics
+    scrape_interval: 15s
+
+  - job_name: 'ollama-proxy'
+    static_configs:
+      - targets: ['ollama.tailce422e.ts.net:11435']
+    metrics_path: /metrics
+    scrape_interval: 15s
+
+  # Optional: Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']

@@ -1,0 +1,122 @@
+[
+  {
+    "relationship_type": "CONSORT_OF",
+    "source_name": "Shiva",
+    "target_name": "Parvati",
+    "description": "Shiva's beloved wife, Parvati, is the goddess of love and fertility. Their union brought harmony to the universe, and together they are the parents of Ganesha and Kartikeya, who bring joy and wisdom to the world.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Shiva Purana, Devi Bhagavatam"
+  },
+  {
+    "relationship_type": "FATHER_OF",
+    "source_name": "Shiva",
+    "target_name": "Ganesha",
+    "description": "Shiva is the father of Ganesha, the elephant-headed god of wisdom and remover of obstacles. Ganesha was born from Shiva's third eye, and his playful nature brings happiness to all who worship him.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Bhagavata Purana, Skanda Purana"
+  },
+  {
+    "relationship_type": "FATHER_OF",
+    "source_name": "Shiva",
+    "target_name": "Kartikeya",
+    "description": "Shiva is the father of Kartikeya, the warrior god who rides a peacock. Kartikeya was born from Shiva's tears and is celebrated for his courage and skill in battle.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Ramayana, Mahabharata"
+  },
+  {
+    "relationship_type": "RIDES",
+    "source_name": "Shiva",
+    "target_name": "Nandi",
+    "description": "Shiva's mighty bull, Nandi, is his loyal companion and vehicle. Nandi stands guard at Kailash, Shiva's sacred mountain, and is revered by devotees for his strength and devotion.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Shiva Purana, Vishnu Purana"
+  },
+  {
+    "relationship_type": "CONSORT_OF",
+    "source_name": "Shiva",
+    "target_name": "Uma",
+    "description": "Uma, another name for Parvati, is Shiva's eternal consort. Their union symbolizes the balance between creation and destruction, and their love story is celebrated in many sacred texts.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Devi Bhagavatam, Markandeya Purana"
+  },
+  {
+    "relationship_type": "CONSORT_OF",
+    "source_name": "Shiva",
+    "target_name": "Ganga",
+    "description": "The sacred river Ganga is considered Shiva's consort. She flows from his matted hair, purifying the earth and granting liberation to those who bathe in her waters.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Garuda Purana, Padma Purana"
+  },
+  {
+    "relationship_type": "ALLY_OF",
+    "source_name": "Shiva",
+    "target_name": "Brahma",
+    "description": "Shiva and Brahma are allies in the cosmic dance of creation and destruction. Together with Vishnu, they form the Trimurti, the three pillars of the universe.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Vishnu Purana, Mahabharata"
+  },
+  {
+    "relationship_type": "ALLY_OF",
+    "source_name": "Shiva",
+    "target_name": "Vishnu",
+    "description": "Shiva and Vishnu are eternal allies, working in harmony to maintain the balance of the cosmos. Their friendship is a lesson in unity and mutual respect.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Bhagavata Purana, Shiva Purana"
+  },
+  {
+    "relationship_type": "DISCIPLE_OF",
+    "source_name": "Shiva",
+    "target_name": "Markandeya",
+    "description": "The sage Markandeya was a devoted disciple of Shiva. Through his devotion, he was granted immortality and became a revered storyteller of cosmic truths.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Markandeya Purana"
+  },
+  {
+    "relationship_type": "RESIDES_AT",
+    "source_name": "Shiva",
+    "target_name": "Kailash",
+    "description": "Shiva resides on Mount Kailash, a sacred peak in the Himalayas. This mountain is considered the abode of the gods and a place of spiritual pilgrimage.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Padma Purana, Skanda Purana"
+  },
+  {
+    "relationship_type": "FATHER_OF",
+    "source_name": "Shiva",
+    "target_name": "The Ganas",
+    "description": "Shiva is the father of the Ganas, a divine assembly of attendants who serve him. These playful and powerful beings are guardians of Shiva's realm.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Shiva Purana, Devi Bhagavatam"
+  },
+  {
+    "relationship_type": "PARTICIPATED_IN",
+    "source_name": "Shiva",
+    "target_name": "The Trimurti",
+    "description": "Shiva is a central figure in the Trimurti, the cosmic trinity of creation (Brahma), preservation (Vishnu), and destruction (Shiva). Together, they sustain the universe.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Vedas, Upanishads"
+  },
+  {
+    "relationship_type": "ASSOCIATED_WITH",
+    "source_name": "Shiva",
+    "target_name": "The River Narmada",
+    "description": "Shiva is associated with the sacred river Narmada, which is believed to have originated from his tears. The river is a symbol of purity and spiritual renewal.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Padma Purana, Garuda Purana"
+  },
+  {
+    "relationship_type": "OWNS",
+    "source_name": "Shiva",
+    "target_name": "The Lingam",
+    "description": "Shiva is revered through the Lingam, a sacred symbol of his divine form. The Lingam represents the infinite and is worshipped in temples worldwide.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Shiva Purana, Devi Bhagavatam"
+  },
+  {
+    "relationship_type": "USES",
+    "source_name": "Shiva",
+    "target_name": "The Third Eye",
+    "description": "Shiva's third eye, a symbol of wisdom and power, is used to destroy ignorance and illusion. It is said to have created Ganesha when it opened in a moment of anger.",
+    "source_tradition": "Hinduism",
+    "source_reference": "Skanda Purana, Mahabharata"
+  }
+]

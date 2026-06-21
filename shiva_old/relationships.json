@@ -1,0 +1,162 @@
+[
+  {
+    "relationship_type": "CONSORT_OF",
+    "source_name": "Shiva",
+    "target_name": "Parvati",
+    "description": "Shiva's primary consort, also known as Uma, Durga, and Kali in different contexts.",
+    "source_tradition": "Shiva Purana, Devi Bhagavatam",
+    "source_reference": "Shiva Purana 2.2.1-2.2.22"
+  },
+  {
+    "relationship_type": "FATHER_OF",
+    "source_name": "Shiva",
+    "target_name": "Ganesha",
+    "description": "Shiva is the father of Ganesha, born from Shiva's third eye or Parvati's creation.",
+    "source_tradition": "Shiva Purana, Mudgala Purana",
+    "source_reference": "Shiva Purana 2.3.1-2.3.10"
+  },
+  {
+    "relationship_type": "FATHER_OF",
+    "source_name": "Shiva",
+    "target_name": "Kartikeya (Skanda)",
+    "description": "Shiva is the father of Kartikeya, born from Shiva's tears or the union of Shiva and Parvati.",
+    "source_tradition": "Skanda Purana, Mahabharata",
+    "source_reference": "Skanda Purana 1.1.1-1.1.5"
+  },
+  {
+    "relationship_type": "FATHER_OF",
+    "source_name": "Shiva",
+    "target_name": "Yama",
+    "description": "In some traditions, Yama, the god of death, is considered a son of Shiva.",
+    "source_tradition": "Vishnu Purana, Markandeya Purana",
+    "source_reference": "Vishnu Purana 4.13.15"
+  },
+  {
+    "relationship_type": "FATHER_OF",
+    "source_name": "Shiva",
+    "target_name": "Hanuman",
+    "description": "In some texts, Shiva is considered the biological father of Hanuman, the monkey god.",
+    "source_tradition": "Ramayana, Skanda Purana",
+    "source_reference": "Ramayana 6.113.1-6"
+  },
+  {
+    "relationship_type": "CHILD_OF",
+    "source_name": "Shiva",
+    "target_name": "Daksha",
+    "description": "Shiva's father, though some texts describe his birth from a sacrificial fire.",
+    "source_tradition": "Shiva Purana, Mahabharata",
+    "source_reference": "Shiva Purana 1.2.1-1.2.5"
+  },
+  {
+    "relationship_type": "MOTHER_OF",
+    "source_name": "Shiva",
+    "target_name": "Sati",
+    "description": "Shiva's first wife, who is reborn as Parvati; her self-sacrifice led to Shiva's rage.",
+    "source_tradition": "Mahabharata, Shiva Purana",
+    "source_reference": "Mahabharata 12.182.1-12"
+  },
+  {
+    "relationship_type": "RIDES",
+    "source_name": "Shiva",
+    "target_name": "Nandi",
+    "description": "Shiva's vehicle (vahana), the bull Nandi, symbolizing fertility and strength.",
+    "source_tradition": "Puranas, Iconography",
+    "source_reference": "Shiva Purana 1.22.1-1.22.10"
+  },
+  {
+    "relationship_type": "USES",
+    "source_name": "Shiva",
+    "target_name": "Trishula",
+    "description": "Shiva's iconic trident, representing the three functions of creation, preservation, and destruction.",
+    "source_tradition": "Iconography, Puranas",
+    "source_reference": "Shiva Purana 1.21.1-1.21.5"
+  },
+  {
+    "relationship_type": "USES",
+    "source_name": "Shiva",
+    "target_name": "Damru",
+    "description": "Shiva's drum, symbolizing the cosmic sound 'Om' and the cycle of creation and destruction.",
+    "source_tradition": "Iconography, Shiva Purana",
+    "source_reference": "Shiva Purana 1.21.6-1.21.10"
+  },
+  {
+    "relationship_type": "RESIDES_AT",
+    "source_name": "Shiva",
+    "target_name": "Kailash",
+    "description": "Shiva's abode, Mount Kailash, considered the axis of the universe.",
+    "source_tradition": "Puranas, Tantric texts",
+    "source_reference": "Shiva Purana 1.23.1-1.23.5"
+  },
+  {
+    "relationship_type": "ASSOCIATED_WITH",
+    "source_name": "Shiva",
+    "target_name": "Lingam",
+    "description": "The symbolic representation of Shiva's form, worshipped in temples and rituals.",
+    "source_tradition": "Shiva Purana, Smriti texts",
+    "source_reference": "Shiva Purana 1.16.1-1.16.10"
+  },
+  {
+    "relationship_type": "ASSOCIATED_WITH",
+    "source_name": "Shiva",
+    "target_name": "Third Eye",
+    "description": "Shiva's third eye, representing omniscience and destructive power.",
+    "source_tradition": "Iconography, Puranas",
+    "source_reference": "Shiva Purana 1.20.1-1.20.5"
+  },
+  {
+    "relationship_type": "GURU_OF",
+    "source_name": "Shiva",
+    "target_name": "Ganas",
+    "description": "Shiva is the spiritual teacher of the Ganas (attendants), a group of semi-divine beings.",
+    "source_tradition": "Shiva Purana, Tantras",
+    "source_reference": "Shiva Purana 1.24.1-1.24.10"
+  },
+  {
+    "relationship_type": "GURU_OF",
+    "source_name": "Shiva",
+    "target_name": "Markandeya",
+    "description": "Shiva is the spiritual teacher of the sage Markandeya, who attained immortality through his guidance.",
+    "source_tradition": "Markandeya Purana",
+    "source_reference": "Markandeya Purana 1.1.1-1.1.5"
+  },
+  {
+    "relationship_type": "GURU_OF",
+    "source_name": "Shiva",
+    "target_name": "Saptarishis",
+    "description": "Shiva is considered the spiritual teacher of the seven great sages (Saptarishis).",
+    "source_tradition": "Vedas, Puranas",
+    "source_reference": "Vishnu Purana 3.1.1-3.1.5"
+  },
+  {
+    "relationship_type": "PARTICIPATED_IN",
+    "source_name": "Shiva",
+    "target_name": "Samudra Manthan",
+    "description": "Shiva participated in the churning of the ocean, appearing as Mahadeva to drink the poison Halahala.",
+    "source_tradition": "Mahabharata, Bhagavata Purana",
+    "source_reference": "Bhagavata Purana 8.18.30-35"
+  },
+  {
+    "relationship_type": "PARTICIPATED_IN",
+    "source_name": "Shiva",
+    "target_name": "Daksha's Yajna",
+    "description": "Shiva's attendance at Daksha's sacrifice, leading to Sati's death and Shiva's cosmic dance.",
+    "source_tradition": "Shiva Purana, Mahabharata",
+    "source_reference": "Shiva Purana 2.1.1-2.1.10"
+  },
+  {
+    "relationship_type": "WORSHIPPED_AT",
+    "source_name": "Shiva",
+    "target_name": "Shiva Lingam",
+    "description": "Shiva is worshipped in the form of the lingam in temples worldwide, particularly at Kedarnath and Badrinath.",
+    "source_tradition": "Puranas, Smriti texts",
+    "source_reference": "Shiva Purana 1.16.1-1.16.10"
+  },
+  {
+    "relationship_type": "ASSOCIATED_WITH",
+    "source_name": "Shiva",
+    "target_name": "Tantra",
+    "description": "Shiva is the principal deity of Tantric traditions, symbolizing spiritual liberation and cosmic energy.",
+    "source_tradition": "Tantras, Shiva Purana",
+    "source_reference": "Shiva Purana 1.18.1-1.18.5"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "entity_name": "Shiva",
+  "started_at": "2026-06-21T12:29:14.682917+00:00",
+  "finished_at": "2026-06-21T12:48:37.128974+00:00",
+  "total_seconds": 1162.45,
+  "total_minutes": 19.37,
+  "pipeline_steps": {
+    "entity_name": "Shiva",
+    "total_seconds": 1162.2,
+    "total_minutes": 19.37,
+    "steps": [
+      {
+        "step": "entity_profile",
+        "duration_seconds": 363.36
+      },
+      {
+        "step": "relationships",
+        "duration_seconds": 65.15
+      },
+      {
+        "step": "stories",
+        "duration_seconds": 263.61
+      },
+      {
+        "step": "temples",
+        "duration_seconds": 297.36
+      },
+      {
+        "step": "festivals",
+        "duration_seconds": 62.69
+      },
+      {
+        "step": "weapons",
+        "duration_seconds": 55.88
+      },
+      {
+        "step": "places",
+        "duration_seconds": 54.14
+      }
+    ]
+  },
+  "exported_files": 29
+}

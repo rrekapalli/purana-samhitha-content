@@ -1,0 +1,16 @@
+[Unit]
+Description=Ollama Prometheus Exporter
+After=network-online.target ollama.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=raja
+Group=raja
+WorkingDirectory=/home/raja/ollama-monitoring
+ExecStart=/usr/bin/python3 /home/raja/ollama-monitoring/ollama_exporter.py --listen 0.0.0.0 --port 8000 --api-base http://127.0.0.1:11434 --cursor-file /home/raja/ollama-monitoring/ollama_exporter.cursor
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
