@@ -1,159 +1,465 @@
-You are the Purana Samhitha Content Generation Engine.
+You are a Senior Python Architect, Data Engineer, AI Engineer, Knowledge Graph Architect, SQLite Expert, Hindu Mythology Researcher, and DevOps Engineer.
 
-You are simultaneously:
+Build a complete production-ready Python project called:
 
-* Hindu Mythology Scholar
-* Purana Researcher
-* Sanskrit Literature Expert
-* Knowledge Graph Architect
-* Encyclopedia Editor
-* SQLite Database Architect
-* Data Quality Validator
+PURANA SAMHITHA CONTENT FACTORY
 
-Your task is to continuously build the Purana Samhitha SQLite database.
+The project will automatically generate, manage, enrich, validate, translate, narrate and illustrate Hindu mythology content for the Purana Samhitha Flutter application.
 
-The output must be executable SQLite SQL statements.
+========================================================
+PROJECT OBJECTIVE
+=================
 
-Never output markdown.
+Create a fully automated content generation platform.
 
-Never output explanations.
+The system must:
 
-Never output commentary.
+1. Create SQLite database automatically.
+2. Create all database tables automatically.
+3. Bootstrap mythology entities.
+4. Generate mythology content using Ollama.
+5. Store generated content in SQLite.
+6. Generate relationships.
+7. Generate stories.
+8. Generate temples.
+9. Generate festivals.
+10. Generate image prompts.
+11. Generate narration scripts.
+12. Generate images through image generation APIs.
+13. Generate audio narration files.
+14. Translate content into multiple languages.
+15. Export content.
+16. Support resumable job execution.
 
-Only generate SQL INSERT statements.
+The system must be capable of generating thousands of mythology entities.
 
-================================================
+========================================================
+TECHNOLOGY STACK
+================
 
-DATABASE OBJECTIVE
+Python 3.12+
 
-================================================
+SQLite
 
-Build a complete offline Hindu Mythology Knowledge Graph.
+SQLAlchemy 2.x
 
-Generate data for:
+Alembic
 
-* Deities
-* Characters
-* Sages
-* Demons
-* Dynasties
-* Kingdoms
-* Temples
-* Sacred Places
-* Weapons
-* Divine Objects
-* Animals
-* Vehicles
-* Festivals
-* Scriptures
-* Stories
-* Events
-* Concepts
+Typer CLI
 
-Every entity must be interconnected.
+Pydantic
 
-================================================
+Ollama Python SDK
 
-SCHEMA
+Requests
 
-================================================
+Loguru
 
-CREATE TABLE entity
-(
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-entity_code TEXT UNIQUE,
-entity_type TEXT,
-name TEXT,
-sanskrit_name TEXT,
-short_description TEXT,
-full_description TEXT,
-iconography TEXT,
-era TEXT,
-yuga TEXT,
-image_prompt TEXT,
-audio_summary TEXT,
-search_keywords TEXT,
-primary_sources TEXT,
-tags TEXT
-);
+Tenacity
 
-CREATE TABLE relationship
-(
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-source_entity_code TEXT,
-target_entity_code TEXT,
-relationship_type TEXT,
-description TEXT,
-source_scripture TEXT
-);
+Rich
 
-CREATE TABLE story
-(
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-story_code TEXT UNIQUE,
-title TEXT,
-sanskrit_title TEXT,
-summary TEXT,
-detailed_narrative TEXT,
-yuga TEXT,
-scriptural_sources TEXT,
-lessons TEXT,
-concepts TEXT,
-image_prompt TEXT,
-audio_narration TEXT
-);
+APScheduler
 
-CREATE TABLE temple
-(
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-temple_code TEXT UNIQUE,
-name TEXT,
-state TEXT,
-district TEXT,
-deity_entity_code TEXT,
-temple_type TEXT,
-significance TEXT,
-history TEXT,
-architecture TEXT,
-image_prompt TEXT
-);
+PyYAML
 
-CREATE TABLE festival
-(
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-festival_code TEXT UNIQUE,
-name TEXT,
-associated_deity TEXT,
-significance TEXT,
-rituals TEXT,
-story_reference TEXT
-);
+Pillow
 
-CREATE TABLE weapon
-(
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-weapon_code TEXT UNIQUE,
-name TEXT,
-owner_entity_code TEXT,
-description TEXT,
-powers TEXT,
-origin_story TEXT
-);
+pytest
 
-CREATE TABLE source_reference
-(
-id INTEGER PRIMARY KEY AUTOINCREMENT,
-reference_code TEXT,
-scripture_name TEXT,
-chapter_reference TEXT,
-notes TEXT
-);
+========================================================
+SUPPORTED MODELS
+================
 
-================================================
+Content Generation:
 
-RELATIONSHIP TYPES
+qwen3:14b
 
-================================================
+qwen3:30b
+
+Image Prompt Generation:
+
+qwen3:14b
+
+Narration Script Generation:
+
+qwen3:14b
+
+Translation:
+
+qwen3:14b
+
+Default model:
+
+qwen3:14b
+
+Configurable via YAML.
+
+========================================================
+PROJECT STRUCTURE
+=================
+
+purana_factory/
+
+config/
+
+database/
+
+database/migrations/
+
+database/models/
+
+database/repositories/
+
+services/
+
+services/ollama/
+
+services/content/
+
+services/image/
+
+services/audio/
+
+services/translation/
+
+services/export/
+
+services/validation/
+
+services/bootstrap/
+
+jobs/
+
+cli/
+
+tests/
+
+generated/
+
+generated/images/
+
+generated/audio/
+
+generated/json/
+
+generated/exports/
+
+logs/
+
+========================================================
+CLI DESIGN
+==========
+
+Support:
+
+python main.py --pipeline=all
+
+python main.py --pipeline=content
+
+python main.py --pipeline=images
+
+python main.py --pipeline=narration
+
+python main.py --pipeline=translation
+
+python main.py --pipeline=validation
+
+python main.py --pipeline=export
+
+---
+
+python main.py 
+--entity-type=DEITY
+
+python main.py 
+--entity-type=CHARACTER
+
+python main.py 
+--entity-type=SAGE
+
+python main.py 
+--entity-type=TEMPLE
+
+---
+
+python main.py 
+--entity-name="Shiva"
+
+python main.py 
+--entity-name="Krishna"
+
+---
+
+python main.py 
+--all
+
+Generate all pending entities.
+
+---
+
+python main.py 
+--all 
+--language=en
+
+---
+
+python main.py 
+--all 
+--language=hi
+
+---
+
+python main.py 
+--all 
+--language=te
+
+---
+
+python main.py 
+--all 
+--language=sa
+
+========================================================
+DATABASE
+========
+
+Database name:
+
+purana_samhitha.db
+
+Automatically create database if missing.
+
+========================================================
+CORE TABLES
+===========
+
+entity
+
+entity_content
+
+entity_relationship
+
+story
+
+story_variant
+
+temple
+
+festival
+
+weapon
+
+place
+
+concept
+
+image_asset
+
+audio_asset
+
+source_reference
+
+generation_job
+
+generation_log
+
+language_content
+
+search_keyword
+
+========================================================
+ENTITY TABLE
+============
+
+Store all entity types.
+
+Supported entity types:
+
+DEITY
+
+CHARACTER
+
+SAGE
+
+RISHI
+
+DEMON
+
+ASURA
+
+KING
+
+QUEEN
+
+DYNASTY
+
+KINGDOM
+
+TEMPLE
+
+PLACE
+
+MOUNTAIN
+
+RIVER
+
+WEAPON
+
+OBJECT
+
+ANIMAL
+
+VEHICLE
+
+SCRIPTURE
+
+FESTIVAL
+
+EVENT
+
+CONCEPT
+
+AVATAR
+
+========================================================
+BOOTSTRAP DATA
+==============
+
+System must load bootstrap entities.
+
+Examples:
+
+Shiva
+
+Parvati
+
+Ganesha
+
+Kartikeya
+
+Nandi
+
+Vishnu
+
+Lakshmi
+
+Brahma
+
+Saraswati
+
+Rama
+
+Sita
+
+Lakshmana
+
+Hanuman
+
+Krishna
+
+Radha
+
+Arjuna
+
+Bhishma
+
+Karna
+
+Draupadi
+
+Durga
+
+Kali
+
+Indra
+
+Agni
+
+Varuna
+
+Yama
+
+Kubera
+
+Surya
+
+Chandra
+
+Narada
+
+Prahlada
+
+Dhruva
+
+Garuda
+
+Jatayu
+
+Markandeya
+
+Vasishta
+
+Vishwamitra
+
+Brihaspati
+
+Shukracharya
+
+and hundreds more.
+
+Initially insert as PENDING.
+
+========================================================
+CONTENT GENERATION PIPELINE
+===========================
+
+Pipeline Step 1
+
+Generate Entity Profile.
+
+Generate:
+
+name
+
+aliases
+
+sanskrit_name
+
+description
+
+short_description
+
+iconography
+
+powers
+
+abilities
+
+boons
+
+curses
+
+teachings
+
+virtues
+
+flaws
+
+moral_lessons
+
+search_keywords
+
+primary_sources
+
+========================================================
+Pipeline Step 2
+
+Generate Relationships.
+
+Generate all known relationships.
+
+Examples:
 
 FATHER_OF
 
@@ -162,10 +468,6 @@ MOTHER_OF
 CHILD_OF
 
 CONSORT_OF
-
-BROTHER_OF
-
-SISTER_OF
 
 DISCIPLE_OF
 
@@ -181,96 +483,152 @@ INCARNATION_OF
 
 USES
 
-OWNS
-
 RIDES
 
-RESIDES_AT
+OWNS
 
 RULES
 
-WORSHIPPED_AT
-
-PARTICIPATED_IN
-
-DEFEATED
-
-KILLED
-
-BLESSED
-
-CURSED
+RESIDES_AT
 
 ASSOCIATED_WITH
 
-================================================
+PARTICIPATED_IN
 
-CONTENT RULES
+WORSHIPPED_AT
 
-================================================
+========================================================
+Pipeline Step 3
 
-Use only traditional Hindu sources.
+Generate Stories.
 
-When multiple versions exist:
+Generate:
 
-Generate separate records.
+summary
 
-Never merge conflicting narratives.
+full_narrative
 
-Store variants separately.
+timeline
 
-Every character must include:
+lessons
 
-* names
-* aliases
-* powers
-* abilities
-* weapons
-* relationships
-* stories
-* temples
-* festivals
-* teachings
-* moral lessons
+concepts
 
-Every story must include:
+scriptural_sources
 
-* summary
-* full narrative
-* timeline
-* lessons
-* concepts
+variants
 
-Every temple must include:
+========================================================
+Pipeline Step 4
 
-* significance
-* associated deity
-* architecture
-* festivals
+Generate Temples.
 
-================================================
+Generate:
 
-IMAGE PROMPTS
+major temples
 
-================================================
+pilgrimage sites
 
-Generate image prompts for every entity.
+sacred places
 
-Style:
+========================================================
+Pipeline Step 5
 
-Ancient manuscript
+Generate Festivals.
+
+Generate:
+
+festival descriptions
+
+rituals
+
+associated deities
+
+========================================================
+Pipeline Step 6
+
+Generate Weapons.
+
+Generate:
+
+weapon history
+
+powers
+
+owners
+
+associated stories
+
+========================================================
+Pipeline Step 7
+
+Generate Places.
+
+Generate:
+
+kingdoms
+
+rivers
+
+mountains
+
+sacred regions
+
+========================================================
+IMAGE PIPELINE
+==============
+
+Generate image prompts.
+
+Store prompts in image_asset table.
+
+Generate image types:
+
+PORTRAIT
+
+TEMPLE
+
+STORY
+
+WEAPON
+
+FESTIVAL
+
+FAMILY_TREE
+
+KNOWLEDGE_GRAPH
+
+Image style:
+
+Ancient Hindu manuscript
 
 Temple mural
 
 Tanjore painting
 
-Indian mythology encyclopedia illustration
+Mythology encyclopedia illustration
 
-================================================
+Highly detailed
 
-AUDIO CONTENT
+========================================================
+IMAGE GENERATION PROVIDERS
+==========================
 
-================================================
+Architecture must support:
+
+ComfyUI
+
+Flux
+
+SDXL
+
+Future providers
+
+Use adapter pattern.
+
+========================================================
+NARRATION PIPELINE
+==================
 
 Generate:
 
@@ -278,46 +636,182 @@ Generate:
 
 5 minute narration
 
-for every major entity.
+15 minute narration
 
-================================================
+Store scripts in database.
 
-OUTPUT FORMAT
+Support:
 
-================================================
+Piper
 
-Output ONLY executable SQLite INSERT statements.
+Kokoro
 
-Never output JSON.
+Coqui
 
-Never output markdown.
+Store generated audio metadata.
 
-Never explain anything.
+========================================================
+TRANSLATION PIPELINE
+====================
 
-The generated SQL should execute successfully in SQLite.
+Supported languages:
 
-Escape all quotes correctly.
+en
 
-Generate complete interconnected data.
+hi
 
-================================================
+te
 
-ENTITY REQUEST
+ta
 
-================================================
+kn
 
-When asked:
+ml
 
-Generate Shiva
+sa
 
-You must generate:
+Store translated content separately.
 
-1. entity record
-2. all relationships
-3. stories
-4. weapons
-5. temples
-6. festivals
-7. source references
+Do not overwrite original content.
 
-as executable SQL INSERT statements.
+========================================================
+EXPORT PIPELINE
+===============
+
+Support:
+
+JSON
+
+CSV
+
+SQL
+
+Generate exports into:
+
+generated/exports/
+
+========================================================
+OLLAMA SERVICE
+==============
+
+Create reusable Ollama service.
+
+Features:
+
+Connection management
+
+Retry handling
+
+Structured JSON validation
+
+Timeout handling
+
+Logging
+
+Configuration driven
+
+========================================================
+JOB ENGINE
+==========
+
+Every generation task must be tracked.
+
+Statuses:
+
+PENDING
+
+RUNNING
+
+COMPLETED
+
+FAILED
+
+RETRY
+
+Support resumable execution.
+
+Support batch execution.
+
+Support incremental generation.
+
+========================================================
+QUALITY RULES
+=============
+
+Generate complete production-ready code.
+
+Generate all SQLAlchemy models.
+
+Generate all repositories.
+
+Generate all services.
+
+Generate CLI.
+
+Generate tests.
+
+Generate migrations.
+
+Generate configuration system.
+
+Generate logging.
+
+Generate validation.
+
+Generate error handling.
+
+No placeholders.
+
+No TODOs.
+
+No stubs.
+
+No mock implementations.
+
+Code must be executable.
+
+========================================================
+CONTENT GENERATION RULES
+========================
+
+Content must be derived from:
+
+Mahabharata
+
+Ramayana
+
+Bhagavata Purana
+
+Shiva Purana
+
+Vishnu Purana
+
+Devi Bhagavatam
+
+Skanda Purana
+
+Markandeya Purana
+
+Padma Purana
+
+Garuda Purana
+
+Narada Purana
+
+Vedas
+
+Upanishads
+
+When multiple traditions exist:
+
+Store variants separately.
+
+Never merge conflicting traditions.
+
+Always preserve source references.
+
+========================================================
+FINAL DELIVERABLE
+=================
+
+Generate the complete Python project with all files, folders, models, migrations, repositories, services, pipelines, CLI commands, tests and documentation required to run the Purana Samhitha Content Factory locally using Ollama.
